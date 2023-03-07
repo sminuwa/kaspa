@@ -52,14 +52,17 @@
                         </a>
                         <h3>Welcome to KASPA</h3>
                     </div>
-
+                    @if(session()->has('error'))
+                        <div class="alert alert-danger">{{ session('error') }}</div>
+                    @endif
                     <form class="account-wrap" action="{{ route('dashboard') }}">
+                        @csrf
                         <div class="form-group mb-24 icon">
-                            <input type="email" class="form-control" placeholder="Email" value="kaspa@verdant.ng">
+                            <input name="email" type="email" class="form-control" placeholder="Email" >
                             <img src="assets/images/icon/sms.svg" alt="sms">
                         </div>
                         <div class="form-group mb-24 icon">
-                            <input type="password" class="form-control" placeholder="Password" value="password">
+                            <input name="password" type="password" class="form-control" placeholder="Password" >
                             <img src="assets/images/icon/key.svg" alt="key">
                         </div>
                         <div class="form-group mb-24">

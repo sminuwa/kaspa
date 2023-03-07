@@ -31,6 +31,8 @@
     <link rel="icon" type="image/png" href="assets/common/images/logo.png">
     <!-- Title -->
     <title>KASPA :: Enhancing Agricultural Productivity and Sustainability</title>
+
+    @stack('style')
 </head>
 
 <body class="body-bg-f8faff">
@@ -622,10 +624,7 @@
 <script src="{{asset('assets/js/ajaxchimp.min.js')}}"></script>
 <script src="{{asset('assets/js/custom.js')}}"></script>
 
-<script>
-    $(document).ready(function(){
-        $('#information').modal('show')
-    })
-</script>
+
+@stack('script')
 </body>
 </html>

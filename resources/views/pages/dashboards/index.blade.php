@@ -417,3 +417,11 @@
     </div>
     <!-- End Top Performers Area -->
 @endsection
+
+@push('script')
+    <script>
+        $(document).ready(function(){
+            $('#information').modal('show')
+        })
+    </script>
+@endpush
